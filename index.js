@@ -29,19 +29,21 @@ button.addEventListener('click', function(){
 							<span>${divided_tag[i]}</span>
 							</div>`;
 				display.innerHTML += element;
-				input.value = '';
+				// input.value = '';
 				tags_arr.push(divided_tag[i]);
-				console.log(tags_arr);
+				// console.log(tags_arr);
 			} else {
 				alert(`「${divided_tag[i]}」は既に存在します`);
-				input.value = '';
+				// input.value = '';
 			};
 		};
 	};
+	input.value = '';
 });
 
 function deleteTag(){
-	console.log(this.children);
+	console.log(this);
 };
+
 //タグ内のXが押下されたときの処理
-	display.addEventListener('click', deleteTag, false);
+display.addEventListener('click', deleteTag, false);
