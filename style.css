@@ -10,10 +10,15 @@ body{
 }
 button, input, select{
 	outline: none;
+	color: #555;
 }
 main{
 	width: 80%;
 	margin: 0 auto;
+}
+h2{
+	color: #bc4545;
+	margin-bottom: 10px;
 }
 .main_wrapper{
 	display: flex;
@@ -22,21 +27,25 @@ main{
 	justify-content: center;
 }
 .main_wrapper{
-	width: 50%;
+	width: 50vw;
 	margin: 50px auto;
 }
 .main_wrapper input[type="text"]{
-	width: 96%;
-	font-size: 1em;
-	border: solid 2px lightseagreen;
-	border-radius: 5px;
-	padding: 0.5em;
-	transition: 500ms;
+	width: -webkit-fill-available;
+    font-size: 1em;
+    border: solid 2px #eea90e;
+    border-radius: 5px;
+    padding: 0.5em;
+    transition: 500ms;
+}
+.main_wrapper input[type="text"]::placeholder{
+	color: #eea90e;
+	opacity: 0.6;
 }
 .main_wrapper input[type="text"]:focus{
 	font-size: 1em;
-	border: solid 2px lightseagreen;
-	box-shadow: inset 0 0 5px lightseagreen;
+	border: solid 2px #eea90e;
+	box-shadow: inset 0 0 5px #eea90e;
 	border-radius: 5px;
 	padding: 0.5em;
 }
@@ -45,25 +54,25 @@ main{
 }
 .main_wrapper button{
 	padding: 5px 0;
-	border: none;
-	/*border: solid 2px lightseagreen;*/
-	border-radius: 5px;
-	background: linear-gradient(lightseagreen, #4cc9c9);
-	font-size: 1em;
-	color: #fff;
-	box-shadow: 0 3px 0 #157d77;
-	transition: all 300ms;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to left bottom, #eea90e, #d5165d);
+    font-size: 1em;
+    color: #fff;
+    box-shadow: 0 3px 0 #953636;
+    transition: all 300ms;
+    letter-spacing: 1em;
+    opacity: 0.8;
 }
 .main_wrapper button:hover{
-	background: linear-gradient(lightseagreen, lightseagreen);
-	color: #fff;
+	opacity: 1;
 }
 .main_wrapper button:active{
 	box-shadow: none;
 	transform: translateY(3px);
 }
 .display{
-	width: 60%;
+	width: 80vw;
 	padding: 5px;
 	min-height: 300px;
 	background: silver;
@@ -79,6 +88,9 @@ main{
     border-radius: 50px;
     margin: 5px;
 }
+.tag_body{
+
+}
 
 .tag_body i,
 .tag_body span{
@@ -87,8 +99,30 @@ main{
 }
 
 .tag_body i{
-	color: lightseagreen;
+	color: #eea90e;
 	font-size: 1.5em;
 	margin-right: 0.5em;
 	cursor: pointer;
+}
+
+
+@media screen and (max-width: 425px) {
+    /*　画面サイズ 425pxまで適用　*/
+    main{
+		width: 100%;
+		margin: 0 auto;
+		font-size: 15px;
+	}
+	.main_wrapper{
+		width: 80%;
+		margin: 50px auto;
+	}
+	.main_wrapper input[type="text"] {
+    width: 93%;
+    font-size: 1em;
+    border: solid 2px #eea90e;
+    border-radius: 5px;
+    padding: 0.5em;
+    transition: 500ms;
+}
 }
