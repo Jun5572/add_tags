@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css?family=Kosugi+Maru');
+
+
 *{
 	padding:0;
 	margin:0
@@ -6,6 +10,7 @@ body{
 	width:100%;
 	min-height:100vh;
 	font-size: 18px;
+	font-family: 'Kosugi Maru', sans-serif;
 	background: #fff;
 }
 button, input, select{
